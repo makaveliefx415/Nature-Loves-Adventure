@@ -1,27 +1,34 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react'
+export default function NotFound() {
+  const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4"> hahahahahaha!!!!!! you open the popular Experience you thought there will be more shit page!!<p> ain't that deep developer but next time you will find the page but thank you traveling with Nature Loves Adventure</p> <p>By Brian Benson aka makaveli</p> <p>stay positive remember<p>haste has no blessed</p> </p></p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+    <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-white px-6 py-10">
+      {/* Image Section */}
+      <img
+        src="https://illustrations.popsy.co/gray/web-error.svg"
+        alt="404"
+        className="w-64 md:w-1/3 mb-8 md:mb-0 md:mr-10 animate-fade-in"
+      />
+
+      {/* Text Content */}
+      <div className="text-center md:text-left">
+        <h1 className="text-6xl md:text-8xl font-bold text-blue-600">404</h1>
+        <p className="text-xl md:text-2xl text-gray-800 mt-4">
+          Page not found
+        </p>
+        <p className="text-gray-500 mt-2 text-base md:text-lg">
+          Sorry, we couldn't find the page you're looking for.
+        </p>
+
+        <button
+          onClick={() => navigate('/')}
+          className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition duration-300 ease-in-out shadow-md active:scale-95"
+        >
+          Return Home
+        </button>
       </div>
     </div>
   );
-};
-
-export default NotFound;
+}
