@@ -46,7 +46,7 @@ const Hero = () => {
 
       <div className="hero-overlay" />
 
-      <div className="container mx-auto px-4 relative z-10 text-[12px] md:text-[23px] ">
+      <div className="container mx-auto px-4 relative z-10 text-[12px] md:text-[23px]">
         <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 text-center">
           Discover the Wonderlust  <br />
           of <span className="text-tanzania-gold">Tanzania</span>
