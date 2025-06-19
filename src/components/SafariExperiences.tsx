@@ -60,7 +60,7 @@ const SafariExperiences = () => {
                 <h3 className="text-xl font-bold mb-2 text-tanzania-green">{safari.title}</h3>
                 <p className="text-gray-600 mb-4">{safari.description}</p>
                 <Button 
-                  variant="link" 
+                  variant="outline" 
                   className="w-full border-tanzania-green text-tanzania-green hover:bg-tanzania-green hover:text-white"
                   asChild
                 >
